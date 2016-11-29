@@ -17,15 +17,7 @@
 </head>
 <body ng-app="cookbook">
   <div class="container" ng-controller="MainController as mainCtrl">
-    <section class="row">
-      <div class="recipe col-xs-12 col-sm-4" ng-repeat="recipe in mainCtrl.recipes">
-        <h3>{{recipe.title}}</h3>
-        <p>{{recipe.description}}</p>
-        <ul>
-          <li ng-repeat="ingredient in recipe.ingredients">{{ingredient.name}}</li>
-        </ul>
-      </div>
-    </section>
+    <ng-view></ng-view>
   </div>
 
   <!--[if lt IE 7]>

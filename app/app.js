@@ -2,9 +2,32 @@
 	'use strict';
 
 	// Declare app level module which depends on views, and components
-	angular.module('cookbook', [])
-	.controller('MainController', function() {
-		this.recipes = recipes;
+	angular.module('cookbook', ['ngRoute'])
+	.config(['$routeProvider', function($routeProvider) {
+		$routeProvider
+		.when('/about', {
+			templateUrl: 'partials/about.html',
+			controller: 'AboutController'
+		})
+		.when('/home', {
+			templateUrl: 'partials/home.html',
+			controller: 'MainController'
+		})
+		.otherwise({
+			redirectTo: '/home'
+		})
+	}])
+	.controller('MainController', function($scope) {
+		$scope.recipes = recipes;
+	})
+	.controller('AboutController', function($scope) {
+		$scope.message = "Hello!";
+	})
+	.directive('recipe', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'partials/recipe.html'
+		}
 	});
 
 	var recipes = [
