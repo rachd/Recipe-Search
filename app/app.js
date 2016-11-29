@@ -6,15 +6,15 @@
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider
 		.when('/about', {
-			templateUrl: 'partials/about.html',
+			templateUrl: 'partials/pages/about.html',
 			controller: 'AboutController'
 		})
 		.when('/home', {
-			templateUrl: 'partials/home.html',
+			templateUrl: 'partials/pages/home.html',
 			controller: 'MainController'
 		})
 		.when('/recipes/:recipeID', {
-			templateUrl: 'partials/recipe.html',
+			templateUrl: 'partials/pages/recipe-page.html',
 			controller: 'RecipeController'
 		})
 		.otherwise({
@@ -40,6 +40,7 @@
 
 	var recipes = [
 		{
+			id: 0,
 			title: 'Almond Biscotti',
 			description: 'Crunchy cookies perfect for afternoon tea',
 			ingredients: [
@@ -78,6 +79,7 @@
 			]
 		},
 		{
+			id: 1,
 			title: 'Lemon Bars',
 			description: 'The dessert that launched a thousand ships',
 			ingredients: [
