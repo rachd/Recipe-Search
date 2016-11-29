@@ -17,6 +17,10 @@
 			templateUrl: 'partials/pages/recipe-page.html',
 			controller: 'RecipeController'
 		})
+		.when('/add', {
+			templateUrl: 'partials/pages/add-recipe.html',
+			controller: 'AddRecipeController'
+		})
 		.otherwise({
 			redirectTo: '/home'
 		})
@@ -26,6 +30,9 @@
 	})
 	.controller('AboutController', function($scope) {
 		$scope.message = "Hello!";
+	})
+	.controller('AddRecipeController', function($scope) {
+		
 	})
 	.controller('RecipeController', function($scope, $routeParams) {
 		$scope.recipe_id = $routeParams.recipeID;
