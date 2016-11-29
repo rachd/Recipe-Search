@@ -13,6 +13,10 @@
 			templateUrl: 'partials/home.html',
 			controller: 'MainController'
 		})
+		.when('/recipes/:recipeID', {
+			templateUrl: 'partials/recipe.html',
+			controller: 'RecipeController'
+		})
 		.otherwise({
 			redirectTo: '/home'
 		})
@@ -22,6 +26,10 @@
 	})
 	.controller('AboutController', function($scope) {
 		$scope.message = "Hello!";
+	})
+	.controller('RecipeController', function($scope, $routeParams) {
+		$scope.recipe_id = $routeParams.recipeID;
+		$scope.recipe = recipes[$routeParams.recipeID];
 	})
 	.directive('recipe', function() {
 		return {
