@@ -1,1 +1,22 @@
 <h1>Add A New Recipe</h1>
+
+<form>
+	<div>
+		<label for="name">Recipe Name:</label>
+		<input type="text" id="name" name="recipe_name" ng-model="recipe_name"/>
+	</div>
+	<div>
+		<label for="ingredients">Ingredients:</label>
+		<textarea id="ingredients" ng-model="ingredients"></textarea>
+	</div>
+	<div>
+		<label for="directions">Directions:</label>
+		<textarea id="directions" ng-model="directions"></textarea>
+	</div>
+</form>
+
+<h2>Preview:</h2>
+
+<h3>{{recipe_name}}</h3>
+<p>{{ingredients}}</p>
+<p>{{directions}}</p>
