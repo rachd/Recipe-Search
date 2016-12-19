@@ -32,7 +32,11 @@
 		$scope.message = "Hello!";
 	})
 	.controller('AddRecipeController', function($scope) {
-
+		$scope.ingredients = [];
+		$scope.addNewIngredient = function() {
+			var newItemNo = $scope.ingredients.length+1;
+    		$scope.ingredients.push({});
+		};
 	})
 	.controller('RecipeController', function($scope, $routeParams, RecipeData) {
 		$scope.recipe_id = $routeParams.recipeID;
