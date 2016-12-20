@@ -9,17 +9,22 @@
 		<h4>Ingredients</h4>
 		<fieldset  data-ng-repeat="ingredient in ingredients">
 			<label for="ingredient_name">Ingredient:</label>
-	      <input type="text" ng-model="ingredient.name" name="ingredient_name" placeholder="Ingredient Name"/>
+	      <input type="text" ng-model="ingredient.name" name="ingredient_name"/>
 	      <label for="ingredient_quantity">Quantity:</label>
-	      <input type="text" ng-model="ingredient.quantity" name="ingredient_quantity" placeholder="Ingredient Quantity"/>
+	      <input type="text" ng-model="ingredient.quantity" name="ingredient_quantity"/>
 	   </fieldset>
 
 		<button class="addIngredient" ng-click="addNewIngredient()">Add Ingredient</button>
 	</div>
-	<div>
-		<label for="directions">Directions:</label>
-		<textarea id="directions" ng-model="directions"></textarea>
-	</div>
+	<!-- <div>
+		<h4>Directions</h4>
+		<fieldset  data-ng-repeat="direction in direction">
+			<label for="direction">Step:</label>
+	      <input type="text" ng-model="direction" name="direction"/>
+	   </fieldset>
+
+		<button class="addDirection" ng-click="addNewDirection()">Add Step</button>
+	</div> -->
 	<button type="submit" ng-click="submitRecipeForm()">Submit Recipe</button>
 </form>
 

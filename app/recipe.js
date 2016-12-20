@@ -4,7 +4,6 @@ var RecipeService = angular.module('RecipeService', [])
 		{
 			id: 0,
 			title: 'Almond Biscotti',
-			description: 'Crunchy cookies perfect for afternoon tea',
 			ingredients: [
 				{
 					name: 'All-Purpose Flour',
@@ -43,7 +42,6 @@ var RecipeService = angular.module('RecipeService', [])
 		{
 			id: 1,
 			title: 'Lemon Bars',
-			description: 'The dessert that launched a thousand ships',
 			ingredients: [
 				{
 					name: 'All-Purpose Flour',

@@ -31,12 +31,21 @@
 	.controller('AboutController', function($scope) {
 		$scope.message = "Hello!";
 	})
-	.controller('AddRecipeController', function($scope) {
+	.controller('AddRecipeController', function($scope, RecipeData) {
 		$scope.ingredients = [];
 		$scope.addNewIngredient = function() {
 			var newItemNo = $scope.ingredients.length+1;
     		$scope.ingredients.push({});
 		};
+		$scope.submitRecipeForm = function() {
+			var recipe = {
+				id: RecipeData.recipes.length,
+				title: $scope.recipe_name,
+				ingredients: $scope.ingredients
+			};
+			RecipeData.recipes.push(recipe);
+			console.log(RecipeData.recipes);
+		}
 	})
 	.controller('RecipeController', function($scope, $routeParams, RecipeData) {
 		$scope.recipe_id = $routeParams.recipeID;
