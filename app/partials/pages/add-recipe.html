@@ -1,20 +1,20 @@
 <h1>Add A New Recipe</h1>
 
 <form>
-	<div>
+	<div class="form-group">
 		<label for="name">Recipe Name:</label>
 		<input type="text" id="name" name="recipe_name" ng-model="recipe_name"/>
 	</div>
-	<div>
+	<div class="form-group">
 		<h4>Ingredients</h4>
-		<fieldset  data-ng-repeat="ingredient in ingredients">
+		<fieldset class="form-group" data-ng-repeat="ingredient in ingredients">
 			<label for="ingredient_name">Ingredient:</label>
 	      <input type="text" ng-model="ingredient.name" name="ingredient_name"/>
 	      <label for="ingredient_quantity">Quantity:</label>
 	      <input type="text" ng-model="ingredient.quantity" name="ingredient_quantity"/>
 	   </fieldset>
 
-		<button class="addIngredient" ng-click="addNewIngredient()">Add Ingredient</button>
+		<button class="btn btn-default" ng-click="addNewIngredient()">Add Ingredient</button>
 	</div>
 	<!-- <div>
 		<h4>Directions</h4>
@@ -25,7 +25,7 @@
 
 		<button class="addDirection" ng-click="addNewDirection()">Add Step</button>
 	</div> -->
-	<button type="submit" ng-click="submitRecipeForm()">Submit Recipe</button>
+	<button type="submit" class="btn btn-primary" ng-click="submitRecipeForm()">Submit Recipe</button>
 </form>
 
 <h2>Preview:</h2>
